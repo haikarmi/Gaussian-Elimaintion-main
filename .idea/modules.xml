@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Gaussian-Elimaintion-main.iml" filepath="$PROJECT_DIR$/.idea/Gaussian-Elimaintion-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../condition-of-linear-equations_hai/.idea/condition-of-linear-equations_hai.iml" filepath="$PROJECT_DIR$/../condition-of-linear-equations_hai/.idea/condition-of-linear-equations_hai.iml" />
     </modules>
   </component>
 </project>

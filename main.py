@@ -1,9 +1,13 @@
 import numpy as np
 from numpy.linalg import norm, inv
+
+import cond
 from colors import bcolors
+from cond import norm
 
 
 def gaussianElimination(mat):
+    print( "the norm max is: ",cond.norm(mat)+1)
     N = len(mat)
 
     singular_flag = forward_substitution(mat)
@@ -85,24 +89,14 @@ def backward_substitution(mat):
 
 
 if __name__ == '__main__':
+    print(
+        "the git link: https://github.com/haikarmi/Gaussian-Elimaintion-main.git\n group:Almog Babila-209477678, Hai karmi-207265687, Yagel Batito-318271863, Meril Hasid-324569714\n date :19/02/24 \n student: hai karmi id: 207265687")
 
-    A_b = [[0, 0, 2, 2],
-           [1, 0, 4, 6],
-           [1, 1, 0, -3]]
+    A_b = [[1, 1 / 2, 1 / 3, 1],
+           [1 / 2, 1 / 3, 1 / 4, 0],
+           [1 / 3, 1 / 4, 1 / 5, 0]]
 
-    """
-    check_det = []
 
-    for i in range(len(A_b)):
-        row = []
-        for j in range(len(A_b)):
-            row.append(A_b[i][j])
-        check_det.append(row)
-
-    i = np.linalg.det(check_det)
-    if i < 0.00001 and i > -0.00001:
-        print("cant inverse the matrix, det = 0")
-     """
 
     result = gaussianElimination(A_b)
     if isinstance(result, str):
@@ -112,5 +106,3 @@ if __name__ == '__main__':
         for x in result:
             print("{:.6f}".format(x))
 
-    print(
-        "the git link: https://github.com/haikarmi/Gaussian-Elimaintion-main.git\ngroup:Almog Babila, Hai karmi, Yagel Batito, Meril Hasid\nstudent:hai karmi  207265687")
